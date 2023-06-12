@@ -10,12 +10,14 @@ The project's main scene can be found at Assets/Scenes/Main.
 The main scene includes a prefab with the GenerateMeshScript. This prefab allows you to test mesh generation by configuring the following settings:
 
 #### Plane Generation
+
 Settings:
 - Transforms reference for the plane's start and end points.
 - Plane width
 
-#### - Single Cubes Generate
+#### Single Cubes Generation
 ![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/cubes.png?raw=true)
+
 Settings:
 - Transforms reference for the random position of each cube around that transform.
 - Array of colors for the cubes. All cubes will use the same texture, with only the UV coordinates varying.
@@ -24,6 +26,7 @@ Settings:
 
 #### Cubes Stack Generation
 ![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/stackCubes.png?raw=true)
+
 Settings:
 - Transforms reference for the position of the cube stack.
 - Array of colors for the cube stack. The colors will be assigned from bottom to top.
@@ -31,5 +34,3 @@ Settings:
 - Size of a single cube.
 - Space between cubes.
 - Number of cube stacks to be created.
-
-Feel free to explore and experiment with the mesh generation capabilities provided by this project.
