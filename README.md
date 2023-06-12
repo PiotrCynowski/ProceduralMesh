@@ -1,33 +1,35 @@
 # ProceduralMesh
-simple project with procedural mesh and texture generation
+This repository contains a simple project focused on procedural mesh generation and texture creation.
 
 ### - Mesh Generator
-mesh generator scripts returns Mesh with stack of cubes, and array of single cube Mesh with different UVs, also mesh for plane
-texture generator script returns Texture2d
+The mesh generator scripts provide functionality to generate meshes. The scripts return a mesh of a stack of cubes, an array of individual cube meshes with different UV coordinates, and a mesh for a plane.
 
-the main scene is in Assets/Scenes/Main
-### - In main scene there is prefab with GenerateMeshScript
-With this prefab we can test mesh generation by putting right settings
+The project's main scene can be found at Assets/Scenes/Main.
 
-#### - Plane Generate
-settings:
--transforms reference for plane start and plane end
--plane width
+### Using the Main Scene
+The main scene includes a prefab with the GenerateMeshScript. This prefab allows you to test mesh generation by configuring the following settings:
 
-#### - Cubes Stack Generate
-![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/cubes.png?raw=true)
-settings:
--transforms reference for cube stack position
--array of colors for cube stack, colors will be assigned from bottom to top
--matrix of colors stack should use
--size of single cube
--space between cubes
--number of cubes stack will be created with
+#### Plane Generation
+Settings:
+- Transforms reference for the plane's start and end points.
+- Plane width
 
 #### - Single Cubes Generate
+![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/cubes.png?raw=true)
+Settings:
+- Transforms reference for the random position of each cube around that transform.
+- Array of colors for the cubes. All cubes will use the same texture, with only the UV coordinates varying.
+- Size of a single cube.
+- Number of cubes to be spawned.
+
+#### Cubes Stack Generation
 ![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/stackCubes.png?raw=true)
-settings:
--transforms reference for cube random position around that transform
--array of colors for cubes, all cubes will use same texture, only UV will be different
--size of single cube
--how many cubes should be spawned
+Settings:
+- Transforms reference for the position of the cube stack.
+- Array of colors for the cube stack. The colors will be assigned from bottom to top.
+- Matrix of colors for the stack to use.
+- Size of a single cube.
+- Space between cubes.
+- Number of cube stacks to be created.
+
+Feel free to explore and experiment with the mesh generation capabilities provided by this project.
