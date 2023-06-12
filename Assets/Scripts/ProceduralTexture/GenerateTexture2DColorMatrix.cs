@@ -7,7 +7,7 @@ namespace ProceduralTexture
     {
         public Texture2D GenerateTexture2d(Color[] colors, int colorMatrix)
         {
-            colors = ValidateColorsArray(colors, colorMatrix*colorMatrix);
+            colors = ValidateColorsArray(colors, colorMatrix);
 
             Texture2D texture = new Texture2D(colorMatrix, colorMatrix);
 
@@ -22,22 +22,19 @@ namespace ProceduralTexture
 
         private Color[] ValidateColorsArray(Color[] colorsArray, int colorMatrix)
         {
-            if (colorsArray.Length % 2 != 0)
-            {
-                colorMatrix++;
-            }
+            int colorMatrixLen = colorMatrix * colorMatrix;
 
-            if (colorsArray.Length != colorMatrix)
+            if (colorsArray.Length != colorMatrixLen)
             {
-                if (colorsArray.Length < colorMatrix)
+                if (colorsArray.Length < colorMatrixLen)
                 {
-                    Color[] resizedColors = new Color[colorMatrix];
+                    Color[] resizedColors = new Color[colorMatrixLen];
                     for (int i = 0; i < colorsArray.Length; i++)
                     {
                         resizedColors[i] = colorsArray[i];
                     }
 
-                    for (int i = colorsArray.Length; i < colorMatrix; i++)
+                    for (int i = colorsArray.Length; i < colorMatrixLen; i++)
                     {
                         resizedColors[i] = UnityEngine.Random.ColorHSV();
                     }
@@ -46,7 +43,7 @@ namespace ProceduralTexture
                 }
                 else
                 {
-                    Array.Resize(ref colorsArray, colorMatrix);
+                    Array.Resize(ref colorsArray, colorMatrixLen);
                 }
             }
 
