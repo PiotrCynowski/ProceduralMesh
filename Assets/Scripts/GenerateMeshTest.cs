@@ -76,15 +76,17 @@ namespace GenerateMesh
             Material mat = new Material(Shader.Find("Standard"));
             mat.mainTexture = tex;
             Vector3 pos = cubesCenterPosition.position;
+            Vector3 randomPos = new();
+            float x, z = new();
 
             for (int i = 0; i < meshArray.Length; i++)
             {
                 GameObject cubeObject = new GameObject("Cube");
                 cubeObject.AddComponent<MeshRenderer>().material = mat;
                 cubeObject.AddComponent<MeshFilter>().sharedMesh = meshArray[i];
-                float x = Random.Range(pos.x - spread, pos.x + spread);
-                float z = Random.Range(pos.z - spread, pos.z + spread);
-                Vector3 randomPos = new Vector3(x, 0.5f * cubeSize, z);
+                x = Random.Range(pos.x - spread, pos.x + spread);
+                z = Random.Range(pos.z - spread, pos.z + spread);
+                randomPos = new Vector3(x, 0.5f * cubeSize, z);
                 cubeObject.transform.position = randomPos;
             }
         }
