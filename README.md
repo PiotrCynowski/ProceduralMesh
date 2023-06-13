@@ -1,16 +1,16 @@
 # ProceduralMesh
 This repository contains a simple project focused on procedural mesh generation and texture creation.
+This project was developed using the Unity game engine.
 
 ### - Mesh Generator
 The mesh generator scripts provide functionality to generate meshes. The scripts return a mesh of a stack of cubes, an array of individual cube meshes with different UV coordinates, and a mesh for a plane.
-
+The mesh for cubes is designed to exclude the generation of sides that are not visible to the camera.
 The project's main scene can be found at Assets/Scenes/Main.
 
 ### Using the Main Scene
 The main scene includes a prefab with the GenerateMeshScript. This prefab allows you to test mesh generation by configuring the following settings:
 
 #### Plane Generation
-
 Settings:
 - Transforms reference for the plane's start and end points.
 - Plane width
