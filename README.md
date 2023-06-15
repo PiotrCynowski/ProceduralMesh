@@ -15,6 +15,9 @@ Settings:
 - Transforms reference for the plane's start and end points.
 - Plane width
 
+#### Texture Generation
+Textures are generated for cubes and cube stacks based on an array of colors, allowing each cube to adopt a color from the provided matrix.
+
 #### Single Cubes Generation
 ![alt text](https://github.com/PiotrCynowski/ProceduralMesh/blob/master/pic/cubes.png?raw=true)
 
